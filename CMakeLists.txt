@@ -3,4 +3,4 @@ project(solver-a)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(solver-a Demo.cpp)
+add_executable(Solver-partA Demo.cpp)

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Solver-partA.dir/Demo.cpp.o  -o Solver-partA 

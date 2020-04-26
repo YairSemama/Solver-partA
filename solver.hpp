@@ -4,6 +4,7 @@
 
 #ifndef SOLVER_A_SOLVER_H
 #define SOLVER_A_SOLVER_H
+#pragma once
 #include <iostream>
 #include <complex>
 namespace solver {
@@ -16,6 +17,34 @@ namespace solver {
              ComplexVariable(){
                  real_part = 5;
              }
+        ComplexVariable& operator* (double x);
+        ComplexVariable& operator* ( ComplexVariable& rl);
+        friend ComplexVariable& operator* (double t , ComplexVariable rl);
+
+        ComplexVariable& operator== (ComplexVariable& rl);
+        ComplexVariable& operator== (double rl);
+        friend ComplexVariable& operator== (double t , ComplexVariable rl);
+
+
+        ComplexVariable& operator^ (double x);
+        ComplexVariable& operator^ ( ComplexVariable& rl);
+        friend ComplexVariable& operator^ (double t , ComplexVariable rl);
+
+
+
+        ComplexVariable& operator- ( ComplexVariable& rl);
+        ComplexVariable& operator- ( double rl);
+        friend ComplexVariable& operator- (double t , ComplexVariable rl);
+
+        ComplexVariable& operator+ (double x);
+        ComplexVariable& operator+ ( ComplexVariable& rl);
+        friend ComplexVariable& operator+ (double t , ComplexVariable rl);
+
+
+        ComplexVariable& operator/ (double x);
+        ComplexVariable& operator/ (ComplexVariable& x);
+        friend ComplexVariable& operator/ (double t , ComplexVariable rl);
+
     };
 
     class RealVariable{
@@ -24,67 +53,46 @@ namespace solver {
             RealVariable(){
                 num = 5;
             }
+        RealVariable& operator* (double x);
+        RealVariable& operator* (RealVariable& rl);
+        friend RealVariable& operator* (double t , RealVariable rl);
+
+        RealVariable& operator== (double x );
+        RealVariable& operator== (RealVariable& x);
+        friend RealVariable& operator== (double t , RealVariable rl);
+
+
+        RealVariable& operator^ (double x);
+        RealVariable& operator^ (RealVariable& x);
+        friend RealVariable& operator^ (double t , RealVariable rl);
+
+
+        RealVariable& operator- (double x);
+        RealVariable& operator- (RealVariable& x);
+        friend RealVariable& operator- (double t , RealVariable rl);
+
+        RealVariable& operator+ (double x);
+        RealVariable& operator+ (RealVariable& x);
+        friend RealVariable& operator+ (double t , RealVariable rl);
+
+        RealVariable& operator/ (double x);
+        RealVariable& operator/ (RealVariable& x);
+        friend RealVariable& operator/ (double t , RealVariable rl);
+
+
     };
 
-    class solve{
-        public:
-            RealVariable real_num;
-            ComplexVariable comp_num;
-    };
+    double solve(RealVariable t) ;
 
-    double solve(RealVariable Real);
-    double solve(ComplexVariable Real);
+    std::complex<double> solve(ComplexVariable t) ;
 
-    RealVariable& operator* (double x, RealVariable& rl);
-    RealVariable& operator* (RealVariable& x, RealVariable& rl);
-    RealVariable& operator* (RealVariable& x, double rl);
 
-    RealVariable& operator== (double x, RealVariable& rl);
-    RealVariable& operator== (RealVariable& x, RealVariable& rl);
-    RealVariable& operator== (RealVariable& x, double rl);
 
-    RealVariable& operator^ (double x, RealVariable& rl);
-    RealVariable& operator^ (RealVariable& x, RealVariable& rl);
-    RealVariable& operator^ (RealVariable& x, double rl);
-
-    RealVariable& operator- (double x, RealVariable& rl);
-    RealVariable& operator- (RealVariable& x, RealVariable& rl);
-    RealVariable& operator- (RealVariable& x, double rl);
-
-    RealVariable& operator+ (double x, RealVariable& rl);
-    RealVariable& operator+ (RealVariable& x, RealVariable& rl);
-    RealVariable& operator+ (RealVariable& x, double rl);
-
-    RealVariable& operator/ (double x, RealVariable& rl);
-    RealVariable& operator/ (RealVariable& x, RealVariable& rl);
-    RealVariable& operator/ (RealVariable& x, double rl);
 
     // ---------------------------------------
 
 
-    ComplexVariable& operator* (double x, ComplexVariable& rl);
-    ComplexVariable& operator* (ComplexVariable& x, ComplexVariable& rl);
-    ComplexVariable& operator* (ComplexVariable& x, double rl);
 
-    ComplexVariable& operator== (double x, ComplexVariable& rl);
-    ComplexVariable& operator== (ComplexVariable& x, ComplexVariable& rl);
-    ComplexVariable& operator== (ComplexVariable& x, double rl);
-
-    ComplexVariable& operator^ (double x, ComplexVariable& rl);
-    ComplexVariable& operator^ (ComplexVariable& x, ComplexVariable& rl);
-    ComplexVariable& operator^ (ComplexVariable& x, double rl);
-
-    ComplexVariable& operator- (double x, ComplexVariable& rl);
-    ComplexVariable& operator- (ComplexVariable& x, ComplexVariable& rl);
-    ComplexVariable& operator- (ComplexVariable& x, double rl);
-
-    ComplexVariable& operator+ (double x, ComplexVariable& rl);
-    ComplexVariable& operator+ (ComplexVariable& x, ComplexVariable& rl);
-    ComplexVariable& operator+ (ComplexVariable& x, double rl);
-
-    ComplexVariable& operator/ (double x, ComplexVariable& rl);
-    ComplexVariable& operator/ (ComplexVariable& x, ComplexVariable& rl);
-    ComplexVariable& operator/ (ComplexVariable& x, double rl);
 
 }
 
