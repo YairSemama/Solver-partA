@@ -1,0 +1,3 @@
+/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/CMakeFiles/solver-a.dir
+/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/CMakeFiles/edit_cache.dir
