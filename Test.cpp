@@ -1,4 +1,9 @@
-//
-// Created by uriel on 28.4.2020.
-//
+#include "doctest.h"
+#include "solver.hpp"
 
+TEST_CASE("LOWER FUNCTION")
+{
+solver::
+
+
+}

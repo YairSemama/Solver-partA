@@ -12,12 +12,12 @@ namespace solver {
 
     class ComplexVariable{
 
-        public:
-             double real_part;
-             double comp_part;
-             ComplexVariable(){
-                 real_part = 5;
-             }
+    public:
+        double real_part;
+        double comp_part;
+        ComplexVariable(){
+            real_part = 5;
+        }
         ComplexVariable& operator* (double x);
         ComplexVariable& operator* ( ComplexVariable& rl);
         friend ComplexVariable& operator* (double t , ComplexVariable rl);
@@ -63,11 +63,11 @@ namespace solver {
     };
 
     class RealVariable{
-        public:
-            double num;
-            RealVariable(){
-                num = 5;
-            }
+    public:
+        double num;
+        RealVariable(){
+            num = 5;
+        }
         RealVariable& operator* (double x);
         RealVariable& operator* (RealVariable& rl);
         friend RealVariable& operator* (double t , RealVariable rl);
