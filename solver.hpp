@@ -39,6 +39,7 @@ namespace solver {
         friend ComplexVariable& operator^ (double t , std::complex<double> rl);
         friend ComplexVariable& operator^ (std::complex<double> t, std::complex<double> rl);
         friend ComplexVariable& operator^ (ComplexVariable t , std::complex<double> rl);
+        friend ComplexVariable& operator^ (std::complex<double> rl, ComplexVariable t);
 
 
         ComplexVariable& operator- ( ComplexVariable& rl);

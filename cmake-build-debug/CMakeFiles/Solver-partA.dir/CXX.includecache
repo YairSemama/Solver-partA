@@ -6,23 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/uriel/CLionProjects/Solver-partA/Demo.cpp
+/home/yair/Desktop/CPP/Solver-partA/Demo.cpp
 iostream
 -
 complex
 -
 solver.cpp
-/home/uriel/CLionProjects/Solver-partA/solver.cpp
+/home/yair/Desktop/CPP/Solver-partA/solver.cpp
 
-/home/uriel/CLionProjects/Solver-partA/solver.cpp
+/home/yair/Desktop/CPP/Solver-partA/solver.cpp
 iostream
 -
 complex
 -
 solver.hpp
-/home/uriel/CLionProjects/Solver-partA/solver.hpp
+/home/yair/Desktop/CPP/Solver-partA/solver.hpp
 
-/home/uriel/CLionProjects/Solver-partA/solver.hpp
+/home/yair/Desktop/CPP/Solver-partA/solver.hpp
 iostream
 -
 complex
