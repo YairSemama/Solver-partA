@@ -140,7 +140,6 @@ RealVariable & RealVariable:: operator/ (double x)
 RealVariable & RealVariable::operator/ (RealVariable& x)
 {
     return *this;
-
 }
 
 ComplexVariable& solver::operator* (double t , ComplexVariable rl)
