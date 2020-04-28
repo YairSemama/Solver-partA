@@ -188,9 +188,13 @@ ComplexVariable& solver::operator+ (double t , std::complex<double> rl)
 }
 ComplexVariable& solver::operator+ (std::complex<double> t, std::complex<double> rl)
 {
+<<<<<<< HEAD
     ComplexVariable s ;
     ComplexVariable& d =s ;
     return d;
+=======
+    return *this;
+>>>>>>> 2625b395091d8292db34422faf8ec3a73259368f
 }
 ComplexVariable& solver::operator+ (ComplexVariable t , std::complex<double> rl)
 {
