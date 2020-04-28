@@ -12,12 +12,12 @@ namespace solver {
 
     class ComplexVariable{
 
-    public:
-        double real_part;
-        double comp_part;
-        ComplexVariable(){
-            real_part = 5;
-        }
+        public:
+             double real_part;
+             double comp_part;
+             ComplexVariable(){
+                 real_part = 5;
+             }
         ComplexVariable& operator* (double x);
         ComplexVariable& operator* ( ComplexVariable& rl);
         friend ComplexVariable& operator* (double t , ComplexVariable rl);
@@ -26,6 +26,7 @@ namespace solver {
         friend ComplexVariable& operator* (ComplexVariable t , std::complex<double> rl);
 
         ComplexVariable& operator== (ComplexVariable& rl);
+        ComplexVariable& operator== (std::complex<double> rl);
         ComplexVariable& operator== (double rl);
         friend ComplexVariable& operator== (double t , ComplexVariable rl);
         friend ComplexVariable& operator== (double t , std::complex<double> rl);
@@ -51,8 +52,10 @@ namespace solver {
         ComplexVariable& operator+ ( ComplexVariable& rl);
         friend ComplexVariable& operator+ (double t , ComplexVariable rl);
         friend ComplexVariable& operator+ (double t , std::complex<double> rl);
+        friend ComplexVariable& operator+ (std::complex<double> rl , double t);
         friend ComplexVariable& operator+ (std::complex<double> t, std::complex<double> rl);
         friend ComplexVariable& operator+ (ComplexVariable t , std::complex<double> rl);
+
 
         ComplexVariable& operator/ (double x);
         ComplexVariable& operator/ (ComplexVariable& x);
@@ -63,11 +66,11 @@ namespace solver {
     };
 
     class RealVariable{
-    public:
-        double num;
-        RealVariable(){
-            num = 5;
-        }
+        public:
+            double num;
+            RealVariable(){
+                num = 5;
+            }
         RealVariable& operator* (double x);
         RealVariable& operator* (RealVariable& rl);
         friend RealVariable& operator* (double t , RealVariable rl);
