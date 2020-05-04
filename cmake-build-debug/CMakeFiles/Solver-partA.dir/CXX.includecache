@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yair/Desktop/CPP/Solver-partA/Demo.cpp
+iostream
+-
+complex
+-
+solver.cpp
+/home/yair/Desktop/CPP/Solver-partA/solver.cpp
+
+/home/yair/Desktop/CPP/Solver-partA/solver.cpp
+iostream
+-
+complex
+-
+solver.hpp
+/home/yair/Desktop/CPP/Solver-partA/solver.hpp
+
+/home/yair/Desktop/CPP/Solver-partA/solver.hpp
+iostream
+-
+complex
+-
+

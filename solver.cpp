@@ -46,6 +46,12 @@ ComplexVariable& solver::operator* (ComplexVariable t , std::complex<double> rl)
 }
 
 // -------------------------- Complex == ----------------------------
+ComplexVariable& solver::operator^ (std::complex<double> rl, ComplexVariable t)
+{
+    ComplexVariable s ;
+    ComplexVariable& d =s ;
+    return d;
+}
 
 ComplexVariable& ComplexVariable::operator== (std::complex<double> rl)
 {

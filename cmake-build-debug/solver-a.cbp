@@ -8,6 +8,7 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
+<<<<<<< HEAD
 				<Option working_dir="/home/uriel/CLionProjects/untitled4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
@@ -40,6 +41,30 @@
 			<Target title="untitled4">
 				<Option output="/home/uriel/CLionProjects/untitled4/cmake-build-debug/untitled4" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/uriel/CLionProjects/untitled4/cmake-build-debug"/>
+=======
+				<Option working_dir="/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Solver-partA">
+				<Option output="/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Solver-partA" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug"/>
+>>>>>>> 6cc26b2392a35d46c69d48ea12c6bbc085b60f24
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,6 +79,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/make -j4 -f &quot;/home/uriel/CLionProjects/untitled4/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled4"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/uriel/CLionProjects/untitled4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/uriel/CLionProjects/untitled4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -63,6 +89,17 @@
 			<Target title="untitled4/fast">
 				<Option output="/home/uriel/CLionProjects/untitled4/cmake-build-debug/untitled4" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/uriel/CLionProjects/untitled4/cmake-build-debug"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 Solver-partA"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Solver-partA/fast">
+				<Option output="/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Solver-partA" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug"/>
+>>>>>>> 6cc26b2392a35d46c69d48ea12c6bbc085b60f24
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,6 +114,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/make -j4 -f &quot;/home/uriel/CLionProjects/untitled4/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled4/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/uriel/CLionProjects/untitled4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/uriel/CLionProjects/untitled4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -88,6 +126,29 @@
 			<Option target="untitled4"/>
 		</Unit>
 		<Unit filename="/home/uriel/CLionProjects/untitled4/CMakeLists.txt">
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 Solver-partA/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/yair/Desktop/CPP/Solver-partA/Demo.cpp">
+			<Option target="Solver-partA"/>
+		</Unit>
+		<Unit filename="/home/yair/Desktop/CPP/Solver-partA/CMakeLists.txt">
+>>>>>>> 6cc26b2392a35d46c69d48ea12c6bbc085b60f24
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
