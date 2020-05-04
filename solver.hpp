@@ -67,35 +67,39 @@ namespace solver {
 
     class RealVariable{
         public:
-            double num;
+        double a ,b ,c ;
             RealVariable(){
-                num = 5;
+                a = 0 ;
+                b = 1 ;
+                c  =  0 ;
             }
-        RealVariable& operator* (double x);
-        RealVariable& operator* (RealVariable& rl);
+
         friend RealVariable& operator* (double t , RealVariable rl);
+        friend RealVariable& operator* (RealVariable rl, RealVariable rr);
+        friend RealVariable& operator* (RealVariable rl ,double t);
 
-        RealVariable& operator== (double x );
-        RealVariable& operator== (RealVariable& x);
+
         friend RealVariable& operator== (double t , RealVariable rl);
+        friend RealVariable& operator== (RealVariable rl ,double t );
+        friend RealVariable& operator== (RealVariable rl ,RealVariable rr );
 
 
-        RealVariable& operator^ (double x);
-        RealVariable& operator^ (RealVariable& x);
-        friend RealVariable& operator^ (double t , RealVariable rl);
+        friend RealVariable& operator^ (RealVariable rl , double t);
 
 
-        RealVariable& operator- (double x);
-        RealVariable& operator- (RealVariable& x);
         friend RealVariable& operator- (double t , RealVariable rl);
+        friend RealVariable& operator- (RealVariable t , RealVariable rl);
+        friend RealVariable& operator- (RealVariable rl , double t);
 
-        RealVariable& operator+ (double x);
-        RealVariable& operator+ (RealVariable& x);
+
         friend RealVariable& operator+ (double t , RealVariable rl);
+        friend RealVariable& operator+ (RealVariable rl  ,double t);
+        friend RealVariable& operator+ (RealVariable rl  ,RealVariable rr);
 
-        RealVariable& operator/ (double x);
-        RealVariable& operator/ (RealVariable& x);
+
         friend RealVariable& operator/ (double t , RealVariable rl);
+        friend RealVariable& operator/ ( RealVariable rl , double t );
+
 
 
     };

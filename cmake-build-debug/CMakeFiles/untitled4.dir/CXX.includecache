@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/uriel/CLionProjects/untitled4/Demo.cpp
+iostream
+-
+complex
+-
+solver.cpp
+/home/uriel/CLionProjects/untitled4/solver.cpp
+
+/home/uriel/CLionProjects/untitled4/solver.cpp
+iostream
+-
+complex
+-
+solver.hpp
+/home/uriel/CLionProjects/untitled4/solver.hpp
+
+/home/uriel/CLionProjects/untitled4/solver.hpp
+iostream
+-
+complex
+-
+

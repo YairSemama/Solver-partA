@@ -48,10 +48,10 @@ RM = /snap/clion/111/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uriel/CLionProjects/Solver-partA
+CMAKE_SOURCE_DIR = /home/uriel/CLionProjects/untitled4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uriel/CLionProjects/Solver-partA/cmake-build-debug
+CMAKE_BINARY_DIR = /home/uriel/CLionProjects/untitled4/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uriel/CLionProjects/Solver-partA/cmake-build-debug/CMakeFiles /home/uriel/CLionProjects/Solver-partA/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uriel/CLionProjects/untitled4/cmake-build-debug/CMakeFiles /home/uriel/CLionProjects/untitled4/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uriel/CLionProjects/Solver-partA/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uriel/CLionProjects/untitled4/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Solver-partA
+# Target rules for targets named untitled4
 
 # Build rule for target.
-Solver-partA: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Solver-partA
-.PHONY : Solver-partA
+untitled4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 untitled4
+.PHONY : untitled4
 
 # fast build rule for target.
-Solver-partA/fast:
-	$(MAKE) -f CMakeFiles/Solver-partA.dir/build.make CMakeFiles/Solver-partA.dir/build
-.PHONY : Solver-partA/fast
+untitled4/fast:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/build
+.PHONY : untitled4/fast
 
 Demo.o: Demo.cpp.o
 
@@ -129,7 +129,7 @@ Demo.o: Demo.cpp.o
 
 # target to build an object file
 Demo.cpp.o:
-	$(MAKE) -f CMakeFiles/Solver-partA.dir/build.make CMakeFiles/Solver-partA.dir/Demo.cpp.o
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/Demo.cpp.o
 .PHONY : Demo.cpp.o
 
 Demo.i: Demo.cpp.i
@@ -138,7 +138,7 @@ Demo.i: Demo.cpp.i
 
 # target to preprocess a source file
 Demo.cpp.i:
-	$(MAKE) -f CMakeFiles/Solver-partA.dir/build.make CMakeFiles/Solver-partA.dir/Demo.cpp.i
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/Demo.cpp.i
 .PHONY : Demo.cpp.i
 
 Demo.s: Demo.cpp.s
@@ -147,7 +147,7 @@ Demo.s: Demo.cpp.s
 
 # target to generate assembly for a file
 Demo.cpp.s:
-	$(MAKE) -f CMakeFiles/Solver-partA.dir/build.make CMakeFiles/Solver-partA.dir/Demo.cpp.s
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/Demo.cpp.s
 .PHONY : Demo.cpp.s
 
 # Help Target
@@ -158,7 +158,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Solver-partA"
+	@echo "... untitled4"
 	@echo "... Demo.o"
 	@echo "... Demo.i"
 	@echo "... Demo.s"

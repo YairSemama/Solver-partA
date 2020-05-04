@@ -249,124 +249,195 @@ ComplexVariable& solver::operator/ (ComplexVariable t , std::complex<double> rl)
 
 // --------------------------- Real * ------------------------------
 
-RealVariable & RealVariable:: operator* (double x)
-{
-    return *this;
 
+RealVariable& solver::operator* (RealVariable rl, RealVariable rr)
+{
+
+    RealVariable* ans_ = new RealVariable ;
+    if(rl.a !=0 && rr.a != 0 )  throw std::out_of_range("the power is above 2 ") ;
+    if(rl.a != 0 && rr.b != 0  || rl.b != 0 && rr.a != rl.b) throw std::out_of_range("the power is above 2 ") ;
+    ans_-> a = rl.a * rr.c + rl.b * rl.b + rl.c * rl.a ;
+    ans_-> b = rl.b * rr.c + rr.b* rl.c ;
+    ans_-> c = rr.c * rl.c ;
+    RealVariable& trueAns = *ans_ ;
+    return trueAns;
 }
-RealVariable & RealVariable::operator* (RealVariable& rl)
+RealVariable& solver::operator* (RealVariable rl ,double t)
 {
-    return *this;
-
+    RealVariable* ans_ = new RealVariable ;
+    ans_-> a = t * rl.a ;
+    ans_-> b = t * rl.b ;
+    ans_-> c = t * rl.c ;
+    RealVariable& trueAns = *ans_ ;
+    return trueAns;
 }
 
 RealVariable& solver::operator* (double t , RealVariable rl)
 {
-    RealVariable c;
-    RealVariable& d =c ;
-    return d;
+    RealVariable* ans_ = new RealVariable ;
+    ans_-> a = t * rl.a ;
+    ans_-> b = t * rl.b ;
+    ans_-> c = t * rl.c ;
+    RealVariable& trueAns = *ans_ ;
+    return trueAns;
 }
 
 // ---------------------- Real == ----------------------------
 
-RealVariable & RealVariable::operator== (double x )
-{
-    return *this;
 
-}
-RealVariable & RealVariable::operator== (RealVariable& x)
-{
-    return *this;
 
-}
 RealVariable& solver::operator== (double t , RealVariable rl)
 {
-    RealVariable c;
-    RealVariable& d =c ;
-    return d;
+    return t-rl ;
+}
+
+RealVariable& solver::operator== ( RealVariable rr , RealVariable rl)
+{
+    return rr-rl;
+}
+
+
+
+RealVariable& solver::operator== (RealVariable rl , double t  )
+{
+return rl - t ;
 }
 
 // -------------------------- Real ^ ----------------------------
 
-RealVariable & RealVariable::operator^ (double x)
+RealVariable& solver::operator^ (RealVariable rl , double t)
 {
-    return *this;
+    if(rl.a != 0 || t > 2 || t < 0) throw std::out_of_range("the power is above 2 ") ;
+    RealVariable* ans_ = new RealVariable ;
+    if(t==0)
+    {
+        ans_->a = 0 ;
+        ans_->b = 0 ;
+        ans_->c = 1 ;
+        RealVariable& trueAns = *ans_ ;
+        return trueAns;
+    }
+    ans_->a = rl.b * rl.b ;
+    ans_->b = 2 * rl.b * rl.c ;
+    ans_->c = rl.c * rl.c ;
+    RealVariable& trueAns = *ans_ ;
+    return trueAns;
+}
 
-}
-RealVariable & RealVariable:: operator^ (RealVariable& x)
-{
-    return *this;
 
-}
-RealVariable& solver::operator^ (double t , RealVariable rl)
-{
-    RealVariable c;
-    RealVariable& d =c ;
-    return d;
-}
 // ------------------------ Real - ----------------------------
-RealVariable & RealVariable:: operator- (double x)
-{
-    return *this;
 
-}
-RealVariable & RealVariable::operator- (RealVariable& x)
-{
-    return *this;
-
-}
 
 RealVariable& solver::operator- (double t , RealVariable rl)
 {
-    RealVariable c;
-    RealVariable& d =c ;
-    return d;;
+    RealVariable * ans = new RealVariable;
+    ans->a = rl.a;
+    ans->b = rl.b;
+    ans->c = t - rl.c;
+    RealVariable & ans1 = *ans;
+    return ans1;
 }
+
+RealVariable& solver::operator- (RealVariable rl , RealVariable rr)
+{
+    RealVariable * ans = new RealVariable;
+    ans->a = rl.a - rr.a;
+    ans->b = rl.b - rr.b;
+    ans->c = rl.c - rr.c;
+    RealVariable & ans1 = *ans;
+    return ans1;
+}
+
+RealVariable& solver::operator- (RealVariable rl , double t)
+{
+    RealVariable * ans = new RealVariable;
+    ans->a = rl.a;
+    ans->b = rl.b;
+    ans->c =  rl.c - t;
+    RealVariable & ans1 = *ans;
+    return ans1;
+}
+
 
 // --------------------- Real + ------------------------------
 
-RealVariable & RealVariable::operator+ (double x)
-{
-    return *this;
 
+
+RealVariable& solver::operator+ (double t , RealVariable rl) {
+    RealVariable *ans = new RealVariable;
+    ans->a = rl.a;
+    ans->b = rl.b;
+    ans->c = t + rl.c;
+    RealVariable &ans1 = *ans;
+    return ans1;
 }
-RealVariable & RealVariable:: operator+ (RealVariable& x)
+RealVariable& solver::operator+ (RealVariable rl , double t )
 {
-    return *this;
-
+    RealVariable * ans = new RealVariable;
+    ans->a = rl.a;
+    ans->b = rl.b;
+    ans->c = t + rl.c;
+    RealVariable & ans1 = *ans;
+    return ans1;
 }
 
-RealVariable& solver::operator+ (double t , RealVariable rl)
+RealVariable& solver::operator+ (RealVariable rl , RealVariable rr )
 {
-    RealVariable c;
-    RealVariable& d =c ;
-    return d;
+    RealVariable *ans = new RealVariable;
+    ans->a = rr.a + rl.a;
+    ans->b = rr.b + rl.b;
+    ans->c = rr.c + rl.c;
+    RealVariable &ans1 = *ans;
+    return ans1;
 }
 
 // ----------------------- Real / -------------------------
 
-RealVariable & RealVariable:: operator/ (double x)
-{
-    return *this;
 
-}
-RealVariable & RealVariable::operator/ (RealVariable& x)
-{
-    return *this;
-
-}
 
 RealVariable& solver::operator/ (double t , RealVariable rl)
 {
-    RealVariable c;
-    RealVariable& d =c ;
-    return d;
+    if(rl.a == 0 && rl.b == 0 && rl.c == 0 ) throw std::out_of_range("cant solve /0");
+    RealVariable *ans = new RealVariable;
+    ans->a = t / rl.a;
+    ans->b = t / rl.b;
+    ans->c = t / rl.c;
+    RealVariable &ans1 = *ans;
+    return ans1;
 }
+
+RealVariable& solver::operator/ (RealVariable rl,double t )
+{
+    if(t == 0 ) throw std::out_of_range("cant solve /0");
+
+    RealVariable *ans = new RealVariable;
+    ans->a = rl.a / t ;
+    ans->b = rl.b / t ;
+    ans->c = rl.c / t ;
+    RealVariable &ans1 = *ans;
+    return ans1;
+}
+
+
+
 
 // ---------------------- Solve functions -------------------
 
 double solver::solve(RealVariable t) {
-    return 0 ;
+    double ans ;
+    if(t.a == 0 && t.b == 0) throw  std::out_of_range("Cant solve c = 0");
+    if(t.a > 0 && t.b == 0 && t.c > 0 ) throw  std::out_of_range("Cant solve x^2 = -c");
+    if(t.a != 0)
+    {
+        ans = (-t.b+sqrt((pow(t.b,2)-4*t.a*t.c)))/(2*t.a);
+
+    }
+    else
+    {
+        ans = t.c/(-t.b ) ;
+
+    }
+return ans ;
 }
 
 std::complex<double> solver::solve(ComplexVariable t) {

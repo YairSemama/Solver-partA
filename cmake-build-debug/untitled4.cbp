@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="solver-a"/>
+		<Option title="untitled4"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -84,7 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/uriel/CLionProjects/untitled4/Demo.cpp">
+		<Unit filename="/home/uriel/CLionProjects/untitled4/main.cpp">
 			<Option target="untitled4"/>
 		</Unit>
 		<Unit filename="/home/uriel/CLionProjects/untitled4/CMakeLists.txt">

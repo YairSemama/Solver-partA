@@ -44,16 +44,16 @@ RM = /snap/clion/111/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uriel/CLionProjects/Solver-partA
+CMAKE_SOURCE_DIR = /home/uriel/CLionProjects/untitled4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uriel/CLionProjects/Solver-partA/cmake-build-debug
+CMAKE_BINARY_DIR = /home/uriel/CLionProjects/untitled4/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Solver-partA.dir/all
+all: CMakeFiles/untitled4.dir/all
 
 .PHONY : all
 
@@ -63,36 +63,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Solver-partA.dir/clean
+clean: CMakeFiles/untitled4.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Solver-partA.dir
+# Target rules for target CMakeFiles/untitled4.dir
 
 # All Build rule for target.
-CMakeFiles/Solver-partA.dir/all:
-	$(MAKE) -f CMakeFiles/Solver-partA.dir/build.make CMakeFiles/Solver-partA.dir/depend
-	$(MAKE) -f CMakeFiles/Solver-partA.dir/build.make CMakeFiles/Solver-partA.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uriel/CLionProjects/Solver-partA/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Solver-partA"
-.PHONY : CMakeFiles/Solver-partA.dir/all
+CMakeFiles/untitled4.dir/all:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/depend
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uriel/CLionProjects/untitled4/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target untitled4"
+.PHONY : CMakeFiles/untitled4.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Solver-partA.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uriel/CLionProjects/Solver-partA/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Solver-partA.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uriel/CLionProjects/Solver-partA/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/Solver-partA.dir/rule
+CMakeFiles/untitled4.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uriel/CLionProjects/untitled4/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/untitled4.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uriel/CLionProjects/untitled4/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/untitled4.dir/rule
 
 # Convenience name for target.
-Solver-partA: CMakeFiles/Solver-partA.dir/rule
+untitled4: CMakeFiles/untitled4.dir/rule
 
-.PHONY : Solver-partA
+.PHONY : untitled4
 
 # clean rule for target.
-CMakeFiles/Solver-partA.dir/clean:
-	$(MAKE) -f CMakeFiles/Solver-partA.dir/build.make CMakeFiles/Solver-partA.dir/clean
-.PHONY : CMakeFiles/Solver-partA.dir/clean
+CMakeFiles/untitled4.dir/clean:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/clean
+.PHONY : CMakeFiles/untitled4.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

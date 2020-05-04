@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/uriel/CLionProjects/Solver-partA/Demo.cpp" "/home/uriel/CLionProjects/Solver-partA/cmake-build-debug/CMakeFiles/Solver-partA.dir/Demo.cpp.o"
+  "/home/uriel/CLionProjects/untitled4/Demo.cpp" "/home/uriel/CLionProjects/untitled4/cmake-build-debug/CMakeFiles/untitled4.dir/Demo.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
