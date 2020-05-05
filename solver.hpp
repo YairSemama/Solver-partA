@@ -13,57 +13,58 @@ namespace solver {
     class ComplexVariable{
 
         public:
+
              double real_part;
              double comp_part;
+             double coefficient;
+             double pow;
+
              ComplexVariable(){
-                 real_part = 5;
+                 real_part = 0 ;
+                 comp_part = 0 ;
+                 coefficient = 1 ;
+                 pow = 0 ;
+
              }
-        ComplexVariable& operator* (double x);
-        ComplexVariable& operator* ( ComplexVariable& rl);
+
         friend ComplexVariable& operator* (double t , ComplexVariable rl);
         friend ComplexVariable& operator* (double t , std::complex<double> rl);
         friend ComplexVariable& operator* (std::complex<double> t, std::complex<double> rl);
         friend ComplexVariable& operator* (ComplexVariable t , std::complex<double> rl);
 
-        ComplexVariable& operator== (ComplexVariable& rl);
-        ComplexVariable& operator== (std::complex<double> rl);
-        ComplexVariable& operator== (double rl);
+
         friend ComplexVariable& operator== (double t , ComplexVariable rl);
         friend ComplexVariable& operator== (double t , std::complex<double> rl);
         friend ComplexVariable& operator== (std::complex<double> t, std::complex<double> rl);
-        friend ComplexVariable& operator== (ComplexVariable t , std::complex<double> rl);
-
-        ComplexVariable& operator^ (double x);
-        ComplexVariable& operator^ ( ComplexVariable& rl);
-        friend ComplexVariable& operator^ (double t , ComplexVariable rl);
-        friend ComplexVariable& operator^ (double t , std::complex<double> rl);
-        friend ComplexVariable& operator^ (std::complex<double> t, std::complex<double> rl);
-        friend ComplexVariable& operator^ (ComplexVariable t , std::complex<double> rl);
-        friend ComplexVariable& operator^ (std::complex<double> rl, ComplexVariable t);
+        friend ComplexVariable& operator== (ComplexVariable rl ,ComplexVariable rr);
+        friend ComplexVariable& operator== (ComplexVariable t , double num);
 
 
-        ComplexVariable& operator- ( ComplexVariable& rl);
-        ComplexVariable& operator- ( double rl);
+
+        friend ComplexVariable& operator^ ( ComplexVariable rl , double t);
+        friend ComplexVariable& operator^ (std::complex<double> rl , double t);
+
+
         friend ComplexVariable& operator- (double t , ComplexVariable rl);
         friend ComplexVariable& operator- (double t , std::complex<double> rl);
         friend ComplexVariable& operator- (std::complex<double> t, std::complex<double> rl);
-        friend ComplexVariable& operator- (ComplexVariable t , std::complex<double> rl);
+        friend ComplexVariable& operator- (ComplexVariable rl , ComplexVariable rr);
+        friend ComplexVariable& operator- (ComplexVariable t , double num);
 
-        ComplexVariable& operator+ (double x);
-        ComplexVariable& operator+ ( ComplexVariable& rl);
+
+
         friend ComplexVariable& operator+ (double t , ComplexVariable rl);
-        friend ComplexVariable& operator+ (double t , std::complex<double> rl);
+        friend ComplexVariable& operator+ (ComplexVariable rl , std::complex<double> rr);
         friend ComplexVariable& operator+ (std::complex<double> rl , double t);
-        friend ComplexVariable& operator+ (std::complex<double> t, std::complex<double> rl);
-        friend ComplexVariable& operator+ (ComplexVariable t , std::complex<double> rl);
+        friend ComplexVariable& operator+ (ComplexVariable rl, double t );
+        friend ComplexVariable& operator+ (ComplexVariable rl , ComplexVariable rr);
 
 
-        ComplexVariable& operator/ (double x);
-        ComplexVariable& operator/ (ComplexVariable& x);
+
         friend ComplexVariable& operator/ (double t , ComplexVariable rl);
         friend ComplexVariable& operator/ (double t , std::complex<double> rl);
         friend ComplexVariable& operator/ (std::complex<double> t, std::complex<double> rl);
-        friend ComplexVariable& operator/ (ComplexVariable t , std::complex<double> rl);
+        friend ComplexVariable& operator/ (ComplexVariable rl ,double t);
     };
 
     class RealVariable{

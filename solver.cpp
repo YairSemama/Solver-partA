@@ -10,64 +10,22 @@ using namespace solver;
 
 // ----------------------- Complex * --------------------------
 
-ComplexVariable & ComplexVariable::operator*(double x)
-{
-    return *this;
-}
-ComplexVariable & ComplexVariable::operator* ( ComplexVariable& rl)
-{
-    return *this;
 
-}
 ComplexVariable& solver::operator* (double t , ComplexVariable rl)
 {
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
+    ComplexVariable *temp = new ComplexVariable;
+    temp->comp_part = rl.comp_part * t ;
+    temp->real_part = rl.real_part * t ;
+    temp->coefficient = rl.coefficient * t ;
+    temp ->pow = rl.pow * t ;
+    ComplexVariable& theAns = *temp ;
+    return  theAns ;
+}
 
-}
-ComplexVariable& solver::operator* (double t , std::complex<double> rl)
-{
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
-}
-ComplexVariable& solver::operator* (std::complex<double> t, std::complex<double> rl)
-{
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
-}
-ComplexVariable& solver::operator* (ComplexVariable t , std::complex<double> rl)
-{
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
-}
 
 // -------------------------- Complex == ----------------------------
-ComplexVariable& solver::operator^ (std::complex<double> rl, ComplexVariable t)
-{
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
-}
 
-ComplexVariable& ComplexVariable::operator== (std::complex<double> rl)
-{
-    return *this;
-}
 
-ComplexVariable & ComplexVariable::operator== (ComplexVariable& rl)
-{
-    return *this;
-
-}
-ComplexVariable & ComplexVariable::operator== (double rl)
-{
-    return *this;
-
-}
 
 ComplexVariable& solver::operator== (double t , ComplexVariable rl)
 {
@@ -75,6 +33,12 @@ ComplexVariable& solver::operator== (double t , ComplexVariable rl)
     ComplexVariable& d =s ;
     return d;
 }
+
+ComplexVariable& solver::operator== (ComplexVariable rl , double t)
+{
+    return rl - t ;
+}
+
 ComplexVariable& solver::operator== (double t , std::complex<double> rl)
 {
     ComplexVariable s ;
@@ -87,170 +51,114 @@ ComplexVariable& solver::operator== (std::complex<double> t, std::complex<double
     ComplexVariable& d =s ;
     return d;
 }
-ComplexVariable& solver::operator== (ComplexVariable t , std::complex<double> rl)
+ComplexVariable& solver::operator== (ComplexVariable rl ,ComplexVariable rr)
 {
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
+   return rl -rr ;
 }
 
 // ----------------------------- Complex ^ ---------------------
 
-ComplexVariable & ComplexVariable::operator^ (double x)
-{
-    return *this;
 
-}
-ComplexVariable & ComplexVariable::operator^ ( ComplexVariable& rl)
+ComplexVariable& solver::operator^ ( ComplexVariable rl , double t)
 {
-    return *this;
+    if(t == 0) throw std::out_of_range("cant resovle 0 ");
+    ComplexVariable *temp = new ComplexVariable;
+    temp->comp_part = rl.comp_part  ;
+    temp->real_part = rl.real_part  ;
+    temp->coefficient = 0 ;
+    temp ->pow = rl.pow + 1  ;
+    ComplexVariable& theAns = *temp ;
+    return  theAns ;
+}
 
-}
 
-ComplexVariable& solver::operator^ (double t , ComplexVariable rl)
-{
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
-}
-ComplexVariable& solver::operator^ (double t , std::complex<double> rl)
-{
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
-}
-ComplexVariable& solver::operator^ (std::complex<double> t, std::complex<double> rl)
-{
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
-}
-ComplexVariable& solver::operator^ (ComplexVariable t , std::complex<double> rl)
-{
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
-}
+
+
+
+
 
 // --------------------- Complex - --------------------------------------
-ComplexVariable & ComplexVariable::operator- ( ComplexVariable& rl)
-{
-    return *this;
 
-}
-ComplexVariable & ComplexVariable::operator- ( double rl)
-{
-    return *this;
 
-}
-
-ComplexVariable& solver::operator- (double t , ComplexVariable rl)
+ComplexVariable& solver::operator- (ComplexVariable rl , double t )
 {
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
+    ComplexVariable *temp = new ComplexVariable;
+    temp->comp_part = rl.comp_part  ;
+    temp->real_part = rl.real_part - t ;
+    temp->coefficient = rl.coefficient ;
+    temp->pow = rl.pow ;
+    ComplexVariable& theAns = *temp ;
+    return  theAns ;
 }
-ComplexVariable& solver::operator- (double t , std::complex<double> rl)
+ComplexVariable& solver::operator- (ComplexVariable rl , ComplexVariable rr)
 {
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
-}
-ComplexVariable& solver::operator- (std::complex<double> t, std::complex<double> rl)
-{
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
-}
-ComplexVariable& solver::operator- (ComplexVariable t , std::complex<double> rl)
-{
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
+    ComplexVariable *temp = new ComplexVariable;
+    temp->comp_part = rl.comp_part - rr.comp_part  ;
+    temp->real_part = rl.real_part - rr.real_part;
+    temp->coefficient = rl.coefficient - rr.coefficient ;
+    temp->pow = rl.pow - rr.pow ;
+    ComplexVariable& theAns = *temp ;
+    return  theAns ;
 }
 
 // ------------------------------ Complex + ------------------------
 
-ComplexVariable & ComplexVariable::operator+ (double x)
-{
-    return *this;
 
-}
-ComplexVariable & ComplexVariable::operator+ ( ComplexVariable& rl)
-{
-    return *this;
-
-}
 ComplexVariable& solver::operator+ (double t , ComplexVariable rl)
 {
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
+    ComplexVariable *temp = new ComplexVariable;
+    temp->comp_part = rl.comp_part  ;
+    temp->real_part = rl.real_part + t;
+    temp->coefficient = rl.coefficient  ;
+    temp->pow = rl.pow ;
+    ComplexVariable& theAns = *temp ;
+    return  theAns ;
 }
 
-ComplexVariable& solver::operator+ (std::complex<double> rl , double t)
-{
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
-}
 
-ComplexVariable& solver::operator+ (double t , std::complex<double> rl)
+
+ComplexVariable& solver::operator+ (ComplexVariable rl , std::complex<double> rr)
 {
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
+    ComplexVariable *temp = new ComplexVariable;
+    temp->comp_part = rl.comp_part + rr.imag() ;
+    temp->real_part = rl.real_part + rr.real();
+    temp->coefficient = rl.coefficient  ;
+    temp->pow = rl.pow ;
+    ComplexVariable& theAns = *temp ;
+    return  theAns ;
 }
-ComplexVariable& solver::operator+ (std::complex<double> t, std::complex<double> rl)
+ComplexVariable& solver::operator+ (ComplexVariable rl ,double rr)
 {
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
+    ComplexVariable *temp = new ComplexVariable;
+    temp->comp_part = rl.comp_part  ;
+    temp->real_part = rl.real_part + rr;
+    temp->coefficient = rl.coefficient  ;
+    temp->pow = rl.pow ;
+    ComplexVariable& theAns = *temp ;
+    return  theAns ;
 }
-ComplexVariable& solver::operator+ (ComplexVariable t , std::complex<double> rl)
+ComplexVariable& solver::operator+ (ComplexVariable rl ,ComplexVariable rr)
 {
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
+    ComplexVariable *temp = new ComplexVariable;
+    temp->comp_part = rl.comp_part + rr.comp_part  ;
+    temp->real_part = rl.real_part + rr.real_part;
+    temp->coefficient = rl.coefficient + rr.coefficient ;
+    temp->pow = rl.pow + rr.pow ;
+    ComplexVariable& theAns = *temp ;
+    return  theAns ;
 }
 // ----------------------- Complex / --------------------------
 
-ComplexVariable & ComplexVariable::operator/ (double x)
-{
-    return *this;
 
-}
-ComplexVariable & ComplexVariable::operator/ (ComplexVariable& x)
+ComplexVariable& solver::operator/ (ComplexVariable rl , double t)
 {
-    return *this;
-
-}
-ComplexVariable& solver::operator/ (double t , ComplexVariable rl)
-{
-
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
-}
-
-
-ComplexVariable& solver::operator/ (double t , std::complex<double> rl)
-{
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
-}
-ComplexVariable& solver::operator/ (std::complex<double> t, std::complex<double> rl)
-{
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
-}
-ComplexVariable& solver::operator/ (ComplexVariable t , std::complex<double> rl)
-{
-    ComplexVariable s ;
-    ComplexVariable& d =s ;
-    return d;
+    ComplexVariable *temp = new ComplexVariable;
+    temp->comp_part = rl.comp_part / t  ;
+    temp->real_part = rl.real_part / t;
+    temp->coefficient = rl.coefficient / t ;
+    temp->pow = rl.pow / t ;
+    ComplexVariable& theAns = *temp ;
+    return  theAns ;
 }
 
 // --------------------------- Real * ------------------------------
@@ -447,7 +355,40 @@ return ans ;
 }
 
 std::complex<double> solver::solve(ComplexVariable t) {
-    return 0 ;
+    std::complex<double> ans ;
+    if(t.pow == 0)
+    {
+        t.real_part = t.real_part/t.coefficient ;
+        t.comp_part = t.comp_part/t.coefficient ;
+        ans.imag(-t.comp_part);
+        ans.real(-t.real_part);
+        return ans ;
+    }
+    if (t.pow > 0 && t.coefficient != 0)
+    {
+       double c = pow(t.coefficient,2) - 4 * t.pow * t.real_part ;
+       if(c < 0){
+           c = sqrt(-c);
+           c = c/2*t.pow ;
+           ans.imag(c);
+           ans.real(-t.coefficient/2*t.pow);
+           return ans;
+       }
+       else
+       {
+           ans.real((-t.coefficient+sqrt((pow(t.coefficient,2)-4*t.pow*t.real_part)))/(2*t.pow));
+       }
 
+    } else{
+     t.real_part = -t.real_part/t.pow ;
+     if(t.real_part > 0)
+     {
+         ans.real(sqrt(t.real_part));
+     }
+
+     else ans.imag(sqrt(-t.real_part));
+
+    }
+    return ans ;
 
 }

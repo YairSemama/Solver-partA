@@ -1,9 +1,3 @@
-<<<<<<< HEAD
 /home/uriel/CLionProjects/untitled4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/uriel/CLionProjects/untitled4/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/uriel/CLionProjects/untitled4/cmake-build-debug/CMakeFiles/untitled4.dir
-=======
-/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/CMakeFiles/Solver-partA.dir
-/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/CMakeFiles/edit_cache.dir
->>>>>>> 6cc26b2392a35d46c69d48ea12c6bbc085b60f24

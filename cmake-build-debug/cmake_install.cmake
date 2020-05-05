@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # Install script for directory: /home/uriel/CLionProjects/untitled4
-=======
-# Install script for directory: /home/yair/Desktop/CPP/Solver-partA
->>>>>>> 6cc26b2392a35d46c69d48ea12c6bbc085b60f24
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,9 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-<<<<<<< HEAD
 file(WRITE "/home/uriel/CLionProjects/untitled4/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
-=======
-file(WRITE "/home/yair/Desktop/CPP/Solver-partA/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
->>>>>>> 6cc26b2392a35d46c69d48ea12c6bbc085b60f24
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
